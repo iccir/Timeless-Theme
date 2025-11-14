@@ -15,9 +15,11 @@ The code font shown in the screenshot is Monaco.  The color scheme is [Xcode-ish
 
 Timeless is designed to work with [Sublime Text 4](http://www.sublimetext.com/).
 
+<!-- Uncomment this when available
 #### Package Control
 
 If you are using [Sublime Package Control](https://packagecontrol.io), you can easily install the theme via `Package Control: Install Package` and then select the  `Theme - Timeless` package.
+-->
 
 #### Using Git
 
@@ -54,10 +56,6 @@ To configure Sublime Text to use the theme, follow the instructions below:
 
 * `timeless_use_uppercase_font` - If `true`, uses the `Timeless Uppercase` font for symbol letters. You will need to manually install [TimelessUppercase.ttf](https://github.com/iccir/Timeless-Theme/raw/refs/heads/main/support/TimelessUppercase.ttf).
 * `timeless_hide_goto_symbol_hints` - If `true`, hides hints in the Goto Symbol panel.
-
-## Development
-
-Please note, Sublime Text dev builds move quickly and changes can occur with the theme API between releases, so there may be occasions where the theme doesn't quite work with a brand new dev release.
 
 ## License and Acknowledgements
 
