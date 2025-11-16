@@ -15,11 +15,9 @@ The code font shown in the screenshot is Monaco.  The color scheme is [Xcode-ish
 
 Timeless is designed to work with [Sublime Text 4](http://www.sublimetext.com/).
 
-<!-- Uncomment this when available
 #### Package Control
 
 If you are using [Sublime Package Control](https://packagecontrol.io), you can easily install the theme via `Package Control: Install Package` and then select the  `Theme - Timeless` package.
--->
 
 #### Using Git
 
