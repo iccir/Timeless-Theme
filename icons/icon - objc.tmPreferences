@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
     <key>scope</key>
-    <string>source.python</string>
+    <string>source.objc</string>
     <key>settings</key>
     <dict>
         <key>icon</key>
-        <string>file_type_py</string>
+        <string>file_type_objc</string>
     </dict>
 </dict>
 </plist>
