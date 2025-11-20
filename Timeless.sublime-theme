@@ -919,7 +919,7 @@
         {
             "class": "panel_grid_control",
             "inside_spacing": 4,
-            "outside_hspacing": 8,
+            "outside_hspacing": 6,
             "outside_vspacing": 4
         },
         {
@@ -1123,19 +1123,24 @@
             "layer0.texture": "Theme - Timeless/assets/output-panel-background.png",
             "layer0.inner_margin": 10,
             "layer0.opacity": 1.0,
-            "content_margin": [ 0, 4 ],
+            "content_margin": [ 0, 3, 0, 0 ],
         },
         {
             "class": "panel_grid_control",
             "parents": [ { "class": "output_panel" } ],
-            "outside_hspacing": 9,
-            "outside_vspacing": 5,
+            "outside_hspacing": 0,
+            "outside_vspacing": 0,
             "inside_spacing": 0
         },
         {
             "class": "text_output_control",
             "parents": [{"class": "output_panel"}],
-            "content_margin": [ 0, 0, 12, 0 ]
+            "content_margin": [ 4, 2, 12, 2 ],
+
+            "top_shadow": "color(#000 a(0.15))",
+            "top_shadow_size": 1,
+            "bottom_shadow": "var(--background)",
+            "bottom_shadow_size": 2
         },
         
         // Console Panel Overrides
@@ -1144,26 +1149,31 @@
             "layer0.texture": "Theme - Timeless/assets/output-panel-background.png",
             "layer0.inner_margin": 10,
             "layer0.opacity": 1.0,
-            "content_margin": [0, 4 ],
+            "content_margin": [ 0, 3, 0, 0 ],
         },
         {
             "class": "panel_grid_control",
             "parents": [ { "class": "console_panel" } ],
-            "outside_hspacing": 9,
-            "outside_vspacing": 5,
+            "outside_hspacing": 0,
+            "outside_vspacing": 0,
             "inside_spacing": 0
         },
         {
             "class": "text_output_control",
             "parents": [{"class": "console_panel"}],
-            "content_margin": [ 4, 0, 12, 0 ]
+            "content_margin": [ 8, 0 ],
+
+            "top_shadow": "color(#000 a(0.15))",
+            "top_shadow_size": 1,
+            "bottom_shadow": "var(--background)",
+            "bottom_shadow_size": 2
         },
         {
             "class": "text_line_control",
             "parents": [{"class": "console_panel"}],
-            "content_margin": [ 4, 6, 0, 4 ],
+            "content_margin": [ 8, 7, 0, 5 ],
             "layer0.texture": "Theme - Timeless/assets/io-panel-text-field.png",
-            "layer0.inner_margin": 4
+            "layer0.inner_margin": [ 10, 4, 10, 0 ]
         },  
 
         // I/O Panel Overrides
@@ -1172,26 +1182,31 @@
             "layer0.texture": "Theme - Timeless/assets/output-panel-background.png",
             "layer0.inner_margin": 10,
             "layer0.opacity": 1.0,
-            "content_margin": [0, 4 ],
+            "content_margin": [0, 3, 0, 0 ],
         },
         {
             "class": "panel_grid_control",
             "parents": [ { "class": "io_panel" } ],
-            "outside_hspacing": 9,
-            "outside_vspacing": 5,
+            "outside_hspacing": 0,
+            "outside_vspacing": 0,
             "inside_spacing": 0
         },
         {
             "class": "text_output_control",
             "parents": [{"class": "io_panel"}],
-            "content_margin": [ 1, 0, 12, 0 ]
+            "content_margin": [ 5, 0 ],
+
+            "top_shadow": "color(#000 a(0.15))",
+            "top_shadow_size": 1,
+            "bottom_shadow": "var(--background)",
+            "bottom_shadow_size": 2
         },
         {
             "class": "text_line_control",
             "parents": [{"class": "io_panel"}],
-            "content_margin": [ 4, 6, 0, 4 ],
+            "content_margin": [ 8, 7, 0, 5 ],
             "layer0.texture": "Theme - Timeless/assets/io-panel-text-field.png",
-            "layer0.inner_margin": 4
+            "layer0.inner_margin": [ 10, 4, 10, 0 ]
         },  
 
         // Buttons
@@ -1446,7 +1461,7 @@
             "layer0.texture": "Theme - Timeless/assets/panel-background.png",
             "layer0.inner_margin": [ 0, 1 ],
             "layer0.opacity": 1.0,
-            "content_margin": [ 8, 2 ]
+            "content_margin": [ 6, 2 ]
         },
         {
             "class": "sidebar_button_control",
