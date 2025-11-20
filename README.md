@@ -1,16 +1,15 @@
 # Theme - Timeless
 
-A light theme for Sublime Text 4 inspired by macOS. Timeless is the successor to
-[El Capitan](https://github.com/iccir/El-Capitan-Theme) and is designed to match
-macOS Yosemite through Sequoia.
+A light theme for Sublime Text 4 inspired by macOS.
 
+Timeless is the successor to
+[El Capitan](https://github.com/iccir/El-Capitan-Theme) and is designed to look great with macOS Yosemite through Sequoia.
 
 ## Design
 
-![Screenshot](https://raw.githubusercontent.com/wiki/iccir/Timeless-Theme/screenshots/screenshot.png)
+![Screenshot](screenshots/screenshot.png)
 
 The code font shown in the screenshot is Monaco.  The color scheme is [Xcode-ish](https://gist.github.com/iccir/b999104536ce8211e5e7).
-
 
 ## Installation
 
@@ -53,12 +52,8 @@ To configure Sublime Text to use the theme, follow the instructions below:
         "timeless_hide_goto_symbol_hints": false,
     }
 
-* `timeless_use_uppercase_font` - If `true`, uses the `Timeless Uppercase` font for symbol letters. You will need to manually install [TimelessUppercase.ttf](https://raw.githubusercontent.com/wiki/iccir/Timeless-Theme/support/TimelessUppercase.ttf).
+* `timeless_use_uppercase_font` - If `true`, uses the `Timeless Uppercase` font for symbol letters. You will need to manually install [TimelessUppercase.ttf](https://github.com/iccir/Timeless-Theme/raw/refs/heads/main/support/TimelessUppercase.ttf).
 * `timeless_hide_goto_symbol_hints` - If `true`, hides hints in the Goto Symbol panel.
-
-## Development
-
-Please note, Sublime Text dev builds move quickly and changes can occur with the theme API between releases, so there may be occasions where the theme doesn't quite work with a brand new dev release.
 
 ## License and Acknowledgements
 
