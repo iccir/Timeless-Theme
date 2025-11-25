@@ -1128,21 +1128,21 @@
         {
             "class": "panel_grid_control",
             "parents": [ { "class": "output_panel" } ],
-            "outside_hspacing": 0,
+            "outside_hspacing": 4,
             "outside_vspacing": 0,
             "inside_spacing": 0
         },
         {
             "class": "text_output_control",
             "parents": [{"class": "output_panel"}],
-            "content_margin": [ 4, 2, 12, 2 ],
+            "content_margin": [ 0, 2, 0, 2 ],
 
-            "top_shadow": "color(#000 a(0.15))",
-            "top_shadow_size": 1,
+            "top_shadow": "var(--background)",
+            "top_shadow_size": 2,
             "bottom_shadow": "var(--background)",
             "bottom_shadow_size": 2
         },
-        
+                
         // Console Panel Overrides
         {
             "class": "panel_control console_panel",
@@ -1154,26 +1154,26 @@
         {
             "class": "panel_grid_control",
             "parents": [ { "class": "console_panel" } ],
-            "outside_hspacing": 0,
+            "outside_hspacing": 8,
             "outside_vspacing": 0,
             "inside_spacing": 0
         },
         {
             "class": "text_output_control",
             "parents": [{"class": "console_panel"}],
-            "content_margin": [ 8, 0 ],
+            "content_margin": [ 0, 0 ],
 
-            "top_shadow": "color(#000 a(0.15))",
-            "top_shadow_size": 1,
+            "top_shadow": "var(--background)",
+            "top_shadow_size": 2,
             "bottom_shadow": "var(--background)",
             "bottom_shadow_size": 2
         },
         {
             "class": "text_line_control",
             "parents": [{"class": "console_panel"}],
-            "content_margin": [ 8, 7, 0, 5 ],
-            "layer0.texture": "Theme - Timeless/assets/io-panel-text-field.png",
-            "layer0.inner_margin": [ 10, 4, 10, 0 ]
+            "content_margin": [ 0, 7, 0, 5 ],
+            "layer0.texture": "Theme - Timeless/assets/console-panel-text-field.png",
+            "layer0.inner_margin": [ 4, 4, 4, 0 ]
         },  
 
         // I/O Panel Overrides
@@ -1187,26 +1187,26 @@
         {
             "class": "panel_grid_control",
             "parents": [ { "class": "io_panel" } ],
-            "outside_hspacing": 0,
+            "outside_hspacing": 5,
             "outside_vspacing": 0,
             "inside_spacing": 0
         },
         {
             "class": "text_output_control",
             "parents": [{"class": "io_panel"}],
-            "content_margin": [ 5, 0 ],
+            "content_margin": [ 0, 0 ],
 
-            "top_shadow": "color(#000 a(0.15))",
-            "top_shadow_size": 1,
+            "top_shadow": "var(--background)",
+            "top_shadow_size": 2,
             "bottom_shadow": "var(--background)",
             "bottom_shadow_size": 2
         },
         {
             "class": "text_line_control",
             "parents": [{"class": "io_panel"}],
-            "content_margin": [ 8, 7, 0, 5 ],
+            "content_margin": [ 3, 7, 0, 5 ],
             "layer0.texture": "Theme - Timeless/assets/io-panel-text-field.png",
-            "layer0.inner_margin": [ 10, 4, 10, 0 ]
+            "layer0.inner_margin": [ 4, 4, 4, 0 ]
         },  
 
         // Buttons
