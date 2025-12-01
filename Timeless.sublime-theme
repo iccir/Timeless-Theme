@@ -368,7 +368,7 @@
             "max_margin_trim": 0,
             "hit_test_level": 0.0,
             "layer0.texture": "Theme - Timeless/assets/tab-inactive.png",
-            "layer0.inner_margin": 6,
+            "layer0.inner_margin": [ 5, 0 ],
             "layer0.opacity": 1.0
         },
         {
@@ -391,17 +391,14 @@
         {
             "class": "tab_label",
             "font.face": "var(font_face)",
-            "font.size": "var(tab_font_size)"
+            "font.size": "var(tab_font_size)",
+            "fg": "var(tab_label_color)",
+            "opacity": "var(tab_label_opacity)"
         },
         {
             "class": "tab_label",
             "attributes": ["transient"],
             "font.italic": true
-        },
-        {
-            "class": "tab_label",
-            "fg": "var(tab_label_color)",
-            "opacity": "var(tab_label_opacity)",
         },
         {
             "class": "tab_label",
