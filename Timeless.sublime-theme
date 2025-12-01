@@ -1120,15 +1120,18 @@
         // Output Panel Overrides
         {
             "class": "panel_control output_panel",
-            "layer0.texture": "Theme - Timeless/assets/output-panel-background.png",
-            "layer0.inner_margin": 10,
-            "layer0.opacity": 1.0,
+            "layer0.texture": "Theme - Timeless/assets/background-tint.png",
+            "layer0.tint": "color(var(--background))",
+
+            "layer1.texture": "Theme - Timeless/assets/output-panel-background.png",
+            "layer1.inner_margin": 10,
+            "layer1.opacity": 1.0,
             "content_margin": [ 0, 3, 0, 0 ],
         },
         {
             "class": "panel_grid_control",
             "parents": [ { "class": "output_panel" } ],
-            "outside_hspacing": 4,
+            "outside_hspacing": 6,
             "outside_vspacing": 0,
             "inside_spacing": 0
         },
@@ -1146,9 +1149,13 @@
         // Console Panel Overrides
         {
             "class": "panel_control console_panel",
-            "layer0.texture": "Theme - Timeless/assets/output-panel-background.png",
-            "layer0.inner_margin": 10,
-            "layer0.opacity": 1.0,
+
+            "layer0.texture": "Theme - Timeless/assets/background-tint.png",
+            "layer0.tint": "color(var(--background))",
+
+            "layer1.texture": "Theme - Timeless/assets/output-panel-background.png",
+            "layer1.inner_margin": 10,
+            "layer1.opacity": 1.0,
             "content_margin": [ 0, 3, 0, 0 ],
         },
         {
@@ -1173,15 +1180,21 @@
             "parents": [{"class": "console_panel"}],
             "content_margin": [ 0, 7, 0, 5 ],
             "layer0.texture": "Theme - Timeless/assets/console-panel-text-field.png",
-            "layer0.inner_margin": [ 4, 4, 4, 0 ]
-        },  
+            "layer0.inner_margin": [ 4, 4, 4, 0 ],
+            "layer0.opacity": 0.25,
+            "layer0.tint": "white"
+        },
 
         // I/O Panel Overrides
         {
             "class": "panel_control io_panel",
-            "layer0.texture": "Theme - Timeless/assets/output-panel-background.png",
-            "layer0.inner_margin": 10,
-            "layer0.opacity": 1.0,
+
+            "layer0.texture": "Theme - Timeless/assets/background-tint.png",
+            "layer0.tint": "color(var(--background))",
+
+            "layer1.texture": "Theme - Timeless/assets/output-panel-background.png",
+            "layer1.inner_margin": 10,
+            "layer1.opacity": 1.0,
             "content_margin": [0, 3, 0, 0 ],
         },
         {
@@ -1206,7 +1219,9 @@
             "parents": [{"class": "io_panel"}],
             "content_margin": [ 3, 7, 0, 5 ],
             "layer0.texture": "Theme - Timeless/assets/io-panel-text-field.png",
-            "layer0.inner_margin": [ 4, 4, 4, 0 ]
+            "layer0.inner_margin": [ 4, 4, 4, 0 ],
+            "layer0.opacity": 0.25,
+            "layer0.tint": "white"
         },  
 
         // Buttons
