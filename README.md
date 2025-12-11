@@ -52,7 +52,7 @@ To configure Sublime Text to use the theme, follow the instructions below:
         "timeless_hide_goto_symbol_hints": false,
     }
 
-* `timeless_use_uppercase_font` - If `true`, uses the `Timeless Uppercase` font for symbol letters. You will need to manually install [TimelessUppercase.ttf](https://github.com/iccir/Timeless-Theme/raw/refs/heads/main/support/TimelessUppercase.ttf).
+* `timeless_use_uppercase_font` - If `true`, uses the `Timeless Uppercase` font for symbol letters. You will need to manually install [TimelessUppercase.ttf](https://github.com/iccir/Timeless-Theme/raw/refs/heads/main/extras/TimelessUppercase.ttf).
 * `timeless_hide_goto_symbol_hints` - If `true`, hides hints in the Goto Symbol panel.
 
 ## License and Acknowledgements

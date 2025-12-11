@@ -1,0 +1,15 @@
+[
+    {
+        "caption": "Timeless: Install icon support",
+        "command": "timeless_install_icon_support"
+    },
+    {
+        "caption": "Timeless: Install icon support (with C letters)",
+        "command": "timeless_install_icon_support",
+        "args": { "c_letters": true }
+    },
+    {
+        "caption": "Timeless: Remove icon support",
+        "command": "timeless_remove_icon_support"
+    }
+]
