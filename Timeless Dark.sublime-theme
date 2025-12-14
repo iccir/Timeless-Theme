@@ -1,0 +1,81 @@
+{
+    "extends": "Timeless.sublime-theme",
+    "variables":
+    {
+        "base_hue": "hsl(215, 10%, 50%)",
+        "base_tint": "white",
+
+        "panel_background_color": "#202020",
+
+        "text_color": "color(var(base_tint) a(0.85))",
+        "link_color": "#2d64d2",
+
+        "icon_opacity": 0.85,
+        "icon_selected_tint": "#99CCFF",
+        "icon_selected_opacity": 1.0,
+        
+        "sidebar_heading": "hsl(0, 0%, 85%)",
+        "sidebar_label": "hsl(0, 0%, 85%)",
+        "sidebar_label_selected": "hsl(0, 100%, 100%)",
+        "sidebar_label_ignored": "hsl(0, 0%, 60%)",
+
+        "tool_tip_background_color": "#303030",
+        "tool_tip_text_color": "var(text_color)",
+
+        "aux_control_opacity":       { "target": 0.5,  "speed": 4.0, "interpolation": "smoothstep" },
+        "aux_control_hover_opacity": { "target": 0.75, "speed": 4.0, "interpolation": "smoothstep" },
+        "aux_control_pressed_opacity": 0.85,
+
+        "tab_label_opacity": { "target": 0.5, "speed": 4.0, "interpolation": "smoothstep" },
+        "tab_label_selected_opacity": 0.85,
+        "tab_label_hover_opacity": { "target": 0.85,  "speed": 4.0, "interpolation": "smoothstep" },
+
+        "grid_layout_color": "#404040",
+        
+        "inactive_sheet_modifier": "l(95%)",
+
+        "selected_quick_panel_row_tint": "#404040",
+
+        "overlay_background_tint": "#202020",
+
+        "file_tab_background":          "Theme - Timeless/assets/tab-background-dark.png",
+        "file_tab_inactive":            "Theme - Timeless/assets/tab-inactive-dark.png",
+        "file_tab_hover":               "Theme - Timeless/assets/tab-hover-dark.png",
+        "file_tab_active":              "Theme - Timeless/assets/tab-active-dark.png",
+        "file_tab_active_noshadow":     "Theme - Timeless/assets/tab-active-noshadow-dark.png",
+        "file_tab_bottom_fade":         "Theme - Timeless/assets/tab-bottom-fade-dark.png",
+        "file_button":                  "Theme - Timeless/assets/button-dark.png",
+        "file_segment_left":            "Theme - Timeless/assets/segment-left-dark.png",
+        "file_segment_center":          "Theme - Timeless/assets/segment-center-dark.png",
+        "file_segment_right":           "Theme - Timeless/assets/segment-right-dark.png",
+        "file_segment_left_pressed":    "Theme - Timeless/assets/segment-left-pressed-dark.png",
+        "file_segment_center_pressed":  "Theme - Timeless/assets/segment-center-pressed-dark.png",
+        "file_segment_right_pressed":   "Theme - Timeless/assets/segment-right-pressed-dark.png",
+        "file_button_pressed":          "Theme - Timeless/assets/button-pressed-dark.png",
+        "file_text_field":              "Theme - Timeless/assets/text-field-dark.png",
+        "file_quick_panel_text_field":  "Theme - Timeless/assets/quick-panel-text-field.png",
+        "file_checkbox":                "Theme - Timeless/assets/checkbox-dark.png",
+        "file_checkbox_checked":        "Theme - Timeless/assets/checkbox-checked-dark.png",
+        "file_radio":                   "Theme - Timeless/assets/radio-dark.png",
+        "file_radio_selected":          "Theme - Timeless/assets/radio-selected-dark.png",
+        "file_panel_background":        "Theme - Timeless/assets/panel-background-dark.png",
+        "file_output_panel_background": "Theme - Timeless/assets/output-panel-background-dark.png",
+        "file_left_sidebar":            "Theme - Timeless/assets/left-sidebar-background-dark.png",
+        "file_right_sidebar":           "Theme - Timeless/assets/right-sidebar-background-dark.png",
+    },
+    "rules":
+    [
+        {
+            "class": "title_bar",
+            "style": "dark",
+        },
+        {
+            "class": "quick_panel",
+            "dark_content": true,
+        },
+        {
+            "class": "sidebar_tree",
+            "dark_content": true
+        }
+    ]
+}
