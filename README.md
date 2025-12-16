@@ -7,7 +7,8 @@ Timeless is the successor to
 
 ## Design
 
-![Screenshot](docs/sslight.png)
+<img alt="Light mode screenshot" src="docs/sslight.png" width=720>
+<img alt="Dark mode screenshot"  src="docs/ssdark.png"  width=720>
 
 The code font shown in the screenshot is Monaco.  The color schemes are [Heirloom](https://gist.github.com/iccir/a78c588bd6cec6b2cec0eedea9462f99) and Mariana.
 
