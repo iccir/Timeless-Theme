@@ -78,11 +78,18 @@
             "dark_content": true
         },
 
+        // Workaround for #7.
         {
             "class": "icon_folder",
             "settings": ["timeless_use_file_icon_overlay"],
-            "layer1.texture": "Theme - Timeless/assets/folder-extra-shadow.png",
+            "layer1.texture": "Theme - Timeless/assets/folder-closed-extra-shadow.png",
             "layer1.opacity": 0.5
+        },
+        {
+            "class": "icon_folder",
+            "settings": ["timeless_use_file_icon_overlay"],
+            "parents": [{"class": "tree_row", "attributes": ["expanded"]}],
+            "layer1.texture": "Theme - Timeless/assets/folder-opened-extra-shadow.png",
         },
         {
             "class": "icon_file_type",
