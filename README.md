@@ -9,7 +9,7 @@ Timeless is the successor to
 
 ![Screenshot](docs/sslight.png)
 
-The code font shown in the screenshot is Monaco.  The color scheme is [Xcode-ish](https://gist.github.com/iccir/b999104536ce8211e5e7).
+The code font shown in the screenshot is Monaco.  The color schemes are [Heirloom](https://gist.github.com/iccir/a78c588bd6cec6b2cec0eedea9462f99) and Mariana.
 
 ## Installation
 
@@ -64,7 +64,7 @@ To be a good citizen of the ecosystem, Timeless will not use language-specific i
 
 <img src="docs/fileicons1.png" width=126 height=24>
 
-To activate additional icons, run the `Timeless - Install icon support` command via the [command palette](https://docs.sublimetext.io/guide/extensibility/command_palette.html). This will add a `Packages/Timeless Icon Support` folder with the support files necessary to enable additional language-specific icons:
+To activate additional icons, run the `Timeless - Install icon support` command via the [command palette](https://docs.sublimetext.io/guide/extensibility/command_palette.html). This will add a `Caches/Timeless Icon Support` folder with the support files necessary to enable additional language-specific icons:
 
 <img src="docs/fileicons2.png" width=126 height=64>
 
@@ -76,7 +76,7 @@ For alternate icons, run the `Timeless - Install icon support (with C letters)` 
 
 <img src="docs/fileicons4.png" width=106 height=24>
 
-This command will install `C++ Header.sublime-syntax` and `C++ Header.sublime-settings` into the `Packages/Timeless Icon Support` folder. It will also modify `Packages/User/C++.sublime-settings`.
+This command will install `C++ Header.sublime-syntax` and `C++ Header.sublime-settings` into the `Caches/Timeless Icon Support` folder. It will also modify `Packages/User/C++.sublime-settings`.
 
 To revert back to the default state, run the `Timeless - Remove icon support` command. This should fix broken icons in other themes.
 
