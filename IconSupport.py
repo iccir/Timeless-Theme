@@ -104,12 +104,12 @@ CPlusPlusSublimeSettings = """{
 
 
 def get_timeless_icon_support_path() -> str:
-    return os.path.join(sublime.packages_path(), "Timeless Icon Support")
+    return os.path.join(sublime.cache_path(), "Timeless Icon Support")
 
 
 def patch_cpp_extensions(enable: boolean):
     cpp_settings_name = "C++.sublime-settings"
-    user_cpp_settings_path = os.path.join(sublime.packages_path(), "User", "C++.sublime-settings")
+    user_cpp_settings_path = os.path.join(sublime.cache_path(), "User", "C++.sublime-settings")
     magic_key = "__timeless_theme_icon_support__"
 
     if enable:
