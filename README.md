@@ -38,11 +38,11 @@ To configure Sublime Text to use the theme, follow the instructions below:
 
 ### Additional Theme Settings
 
-* `timeless_use_uppercase_font` - If `true`, uses the `Timeless Uppercase` font for symbol letters. You will need to manually install [TimelessUppercase.ttf](https://github.com/iccir/Timeless-Theme/raw/refs/heads/main/extras/TimelessUppercase.ttf). Defaults to `false`.
+* `theme.timeless.symbols.use_uppercase_font` - If `true`, uses the `Timeless Uppercase` font for symbol letters. You will need to manually install [TimelessUppercase.ttf](https://github.com/iccir/Timeless-Theme/raw/refs/heads/main/extras/TimelessUppercase.ttf). Defaults to `false`.
 
-* `timeless_hide_goto_symbol_hints` - If `true`, hides hints in the Goto Symbol panel. Defaults to `false`.
+* `theme.timeless.symbols.hide_hints` - If `true`, hides hints in the Goto Symbol panel. Defaults to `false`.
 
-* `timeless_use_file_icon_overlay` - If `true`, adds an additional shadow to file icons in dark mode. This improves contrast but may conflict with [AFileIcon](https://github.com/SublimeText/AFileIcon) icons. Defaults to `true`.
+* `theme.timeless.icons.use_overlay` - If `true`, adds an additional shadow to file icons in dark mode. This improves contrast but may conflict with [AFileIcon](https://github.com/SublimeText/AFileIcon) icons. Defaults to `true`.
 
 
 ### Example Settings File
@@ -51,9 +51,9 @@ To configure Sublime Text to use the theme, follow the instructions below:
 {
     "theme": "Timeless.sublime-theme",
 
-    "timeless_use_uppercase_font": false,
-    "timeless_hide_goto_symbol_hints": false,
-    "timeless_use_file_icon_overlay": true,
+    "theme.timeless.symbols.use_uppercase_font": false,
+    "theme.timeless.symbols.hide_hints": false,
+    "theme.timeless.icons.use_overlay": true,
 }
 ```
 
