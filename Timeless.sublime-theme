@@ -165,7 +165,7 @@
             "attributes": ["selected"],
             "layer0.texture": "Theme - Timeless/assets/sidebar-highlight.png",
             "layer0.tint": "var(sidebar_highlight_tint)",
-            "layer0.inner_margin": [ 24, 6, 24, 6 ],
+            "layer0.inner_margin": 6,
             "layer0.opacity": 0.05
         },
         {
@@ -505,7 +505,7 @@
             "layer0.texture": "Theme - Timeless/assets/tab-dropdown.png",
             "layer0.tint": "var(aux_control_tint)",
             "layer0.opacity": "var(aux_control_opacity)",
-            "layer0.inner_margin": [16, 0, 16, 0],
+            "layer0.inner_margin": [30, 0, 1, 0],
             "content_margin": [16, 12]
         },
 
@@ -603,7 +603,7 @@
         {
             "class": "mini_quick_panel_row",
             "layer0.texture": "Theme - Timeless/assets/table-row-background.png",
-            "layer0.inner_margin": 5,
+            "layer0.inner_margin": 4,
             "layer0.tint": "var(selected_quick_panel_row_tint)",
             "layer0.opacity": 0.0
         },
@@ -615,7 +615,7 @@
         {
             "class": "quick_panel_row",
             "layer0.texture": "Theme - Timeless/assets/table-row-background.png",
-            "layer0.inner_margin": 5,
+            "layer0.inner_margin": 4,
             "layer0.tint": "var(selected_quick_panel_row_tint)",
             "layer0.opacity": 0.0
         },
@@ -727,7 +727,7 @@
         {
             "class": "popup_control auto_complete_popup",
             "layer0.texture": "Theme - Timeless/assets/popup-background.png",
-            "layer0.inner_margin": [6, 6],
+            "layer0.inner_margin": 5,
 
             "layer0.tint": "var(auto_complete_background_tint_dark)",
             "layer0.opacity": 1.0,
@@ -753,7 +753,7 @@
         {
             "class": "table_row",
             "layer0.texture": "Theme - Timeless/assets/table-row-background.png",
-            "layer0.inner_margin": [5, 5],
+            "layer0.inner_margin": 4,
             "layer0.tint": "var(auto_complete_table_row_tint_dark)",
             "layer0.opacity": 0.0,
         },
@@ -1050,7 +1050,7 @@
             "layer0.texture": "Theme - Timeless/assets/scroll-vertical.png",
             "layer0.tint": "black",
             "layer0.opacity": 0.1,
-            "layer0.inner_margin": 3,
+            "layer0.inner_margin": [ 0, 3 ],
             "content_margin": 3,
         },
         {
@@ -1058,7 +1058,7 @@
             "layer0.texture": "Theme - Timeless/assets/scroll-vertical.png",
             "layer0.tint": "black",
             "layer0.opacity": 0.5,
-            "layer0.inner_margin": 3,
+            "layer0.inner_margin": [ 0, 3 ],
             "content_margin": [ 0, 12 ]        
         },
         {
@@ -1088,12 +1088,14 @@
         {
             "class": "scroll_track_control",
             "attributes": ["horizontal"],
-            "layer0.texture": "Theme - Timeless/assets/scroll-horizontal.png"
+            "layer0.texture": "Theme - Timeless/assets/scroll-horizontal.png",
+            "layer0.inner_margin": [ 3, 0 ],
         },
         {
             "class": "puck_control",
             "attributes": ["horizontal"],
             "layer0.texture": "Theme - Timeless/assets/scroll-horizontal.png",
+            "layer0.inner_margin": [ 3, 0 ],
             "content_margin": [ 12, 0 ]
         },
         // Scroll Bars (Sidebar)
@@ -1328,14 +1330,10 @@
         },
         {
             "class": "icon_button_control",
-            "layer0.inner_margin": 10,
-        },
-        {
-            "class": "icon_button_control",
             "layer0.texture": "var(file_segment_center)",
-            "layer0.inner_margin": 12,
             "layer0.opacity": 1.0,
-            "content_margin": 3
+            "content_margin": 3,
+            "layer0.inner_margin": [ 10, 3 ]
         },
         {
             "class": "icon_button_control",
@@ -1552,7 +1550,7 @@
         {
             "class": "tool_tip_control",
             "layer0.texture": "Theme - Timeless/assets/tooltip-background.png",
-            "layer0.inner_margin": 8,
+            "layer0.inner_margin": 6,
             "layer0.tint": "var(tool_tip_background_color)",
             "layer0.opacity": 1.0,
             "content_margin": [8, 4, 8, 4]
