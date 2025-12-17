@@ -9,4 +9,6 @@ That said:
 
 - `File Icons.sketch` includes vector outlines of various glyphs from [DINish](https://github.com/playbeing/dinish). SIL Open Font License.
 
+- `File Icons.sketch` includes a vector outline of the [Swift](https://www.swift.org) logo.
+
 - `TimelessUppercase.ttf` uses glyphs from [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono). SIL Open Font License.
