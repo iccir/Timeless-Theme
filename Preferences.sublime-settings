@@ -7,5 +7,13 @@
     "theme.timeless.symbols.hide_hints": false,
 
     // If `true`, adds an additional shadow to file icons in dark mode.
-    "theme.timeless.icons.use_overlay": true
+    "theme.timeless.icons.use_overlay": true,
+
+    // If `true`, installs support files for language-specific icons.
+    // This may break icons in other themes (See issue #6).
+    "theme.timeless.icons.install_support_files": false,
+
+    // If `true`, installs support files to use letters for the C family.
+    // Has no effect if `theme.timeless.icons.install_support_files` is false
+    "theme.timeless.icons.install_c_letters": false
 }

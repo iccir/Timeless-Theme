@@ -44,6 +44,11 @@ To configure Sublime Text to use the theme, follow the instructions below:
 
 * `theme.timeless.icons.use_overlay` - If `true`, adds an additional shadow to file icons in dark mode. This improves contrast but may conflict with [AFileIcon](https://github.com/SublimeText/AFileIcon) icons. Defaults to `true`.
 
+* `theme.timeless.icons.install_additional` - If `true`, installs support for additional file icons. This may break icons in other themes. See [Activating additional icons](#activating-additional-icons) for more information. Defaults to `false`.
+
+* `theme.timeless.icons.install_c_letters` - If `true`, installs support files needed to use the letter icons for C files. See [Activating additional icons](#activating-additional-icons) for more information. Defaults to `false`.
+
+
 
 ### Example Settings File
 
@@ -65,7 +70,7 @@ To be a good citizen of the ecosystem, Timeless will not use language-specific i
 
 <img src="docs/fileicons1.png" width=126 height=24>
 
-To activate additional icons, run the `Timeless - Install icon support` command via the [command palette](https://docs.sublimetext.io/guide/extensibility/command_palette.html). This will add a `Caches/Timeless Icon Support` folder with the support files necessary to enable additional language-specific icons:
+To activate additional icons, set the `theme.timeless.icons.install_additional` setting to `true`. This will add a `Caches/Timeless Icon Support` folder with the support files necessary to enable additional language-specific icons:
 
 <img src="docs/fileicons2.png" width=126 height=64>
 
@@ -73,13 +78,13 @@ Sublime Text also has issues differentiating C++ header files from C++ implement
 
 <img src="docs/fileicons3.png" width=86 height=24>
 
-For alternate icons, run the `Timeless - Install icon support (with C letters)` command:
+For alternate icons, set the `theme.timeless.icons.install_c_letters` setting to `true`:
 
 <img src="docs/fileicons4.png" width=106 height=24>
 
-This command will install `C++ Header.sublime-syntax` and `C++ Header.sublime-settings` into the `Caches/Timeless Icon Support` folder. It will also modify `Packages/User/C++.sublime-settings`.
+This setting will install `C++ Header.sublime-syntax` and `C++ Header.sublime-settings` into the `Caches/Timeless Icon Support` folder. It will also modify `Packages/User/C++.sublime-settings`. This setting has no effect if `theme.timeless.icons.install_additional` is `false`.
 
-To revert back to the default state, run the `Timeless - Remove icon support` command. This should fix broken icons in other themes.
+To revert back to the default state, set `theme.timeless.icons.install_additional` to `false`. This should fix broken icons in other themes.
 
 Timeless is also compatible with [AFileIcon](https://github.com/SublimeText/AFileIcon) for icon management.
 

@@ -10,6 +10,10 @@ import os
 import shutil
 
 
+# Bump this after adding a new icons
+Version = 1
+
+
 FileSuffixToScopeMap = {
     "c":          "source.c",
     "c++":        "source.c++",
@@ -103,17 +107,42 @@ CPlusPlusSublimeSettings = """{
 }"""
 
 
+SentinelPy = """
+import sublime, os, shutil
+
+def plugin_loaded() -> None:
+    settings = sublime.load_settings("Preferences.sublime-settings")
+
+    if not settings.get("theme.timeless.icons.install_support_files", False):
+        try:
+            shutil.rmtree(os.path.join(sublime.cache_path(), "Timeless Icon Support"), ignore_errors=True)
+        except:
+            pass
+"""
+            
+
+PreferencesSettings = None
+
+
 def get_timeless_icon_support_path() -> str:
     return os.path.join(sublime.cache_path(), "Timeless Icon Support")
 
 
+def maybe_load_resource(name: str, default_value = None) -> Optional[str]:
+    try:
+        result = sublime.load_resource(name)
+    except:
+        result = default_value
+    
+    return result
+
+
 def patch_cpp_extensions(enable: boolean):
     cpp_settings_name = "C++.sublime-settings"
-    user_cpp_settings_path = os.path.join(sublime.cache_path(), "User", "C++.sublime-settings")
+    user_cpp_settings_path = os.path.join(sublime.packages_path(), "User", "C++.sublime-settings")
     magic_key = "__timeless_theme_icon_support__"
 
     if enable:
-
         if not os.path.exists(user_cpp_settings_path):
             with open(user_cpp_settings_path, "w") as f:
                 f.write(CPlusPlusSublimeSettings)
@@ -130,23 +159,41 @@ def patch_cpp_extensions(enable: boolean):
             
             # Directly load the JSONC file and see if it is empty.
             # If so, remove it to properly clean up after ourselves.
-            raw_dict = sublime.decode_value(sublime.load_resource("Packages/User/C++.sublime-settings"))
+            raw_dict = sublime.decode_value(maybe_load_resource("Packages/User/C++.sublime-settings", ""))
             
             if raw_dict == { }:
                 os.remove(user_cpp_settings_path)
 
 
-def install_icon_support(c_letters: bool = False) -> None:
-    remove_icon_support()
+def is_version_installed(version_path: str, c_letters: bool) -> bool:
+    version_installed = maybe_load_resource(version_path, "").strip()
+
+    if c_letters:
+        version_to_install = "{}+c_letters".format(Version)
+    else:
+        version_to_install = "{}".format(Version)
+        
+    return version_installed == version_to_install
     
+
+def install_icon_support(c_letters: bool = False) -> None:
     base_path = get_timeless_icon_support_path()
     files_path = os.path.join(base_path, "files")
+    version_path = os.path.join(base_path, "version.txt")
+
+    if is_version_installed(version_path, c_letters):
+        return
+
+    remove_icon_support()
 
     os.mkdir(base_path)
     os.mkdir(files_path)
     
-    with open(os.path.join(base_path, "About.txt"), "w") as f:
+    with open(os.path.join(base_path, "about.txt"), "w") as f:
         f.write(AboutTxt)
+
+    with open(os.path.join(base_path, "sentinel.py"), "w") as f:
+        f.write(SentinelPy)
 
     files_to_write = { }
     
@@ -181,12 +228,33 @@ def remove_icon_support() -> None:
     patch_cpp_extensions(False)
 
 
-class TimelessInstallIconSupport(sublime_plugin.ApplicationCommand):
-    def run(self, c_letters: bool = False):
-        install_icon_support(c_letters)
-
-
-class TimelessRemoveIconSupport(sublime_plugin.ApplicationCommand):
-    def run(self):
+def handle_settings_change():
+    install_support_files = PreferencesSettings.get("theme.timeless.icons.install_support_files", False)
+    install_c_letters     = PreferencesSettings.get("theme.timeless.icons.install_c_letters",     False)
+    
+    if install_support_files:
+        install_icon_support(c_letters = install_c_letters)
+    else:
         remove_icon_support()
+
+
+def plugin_loaded() -> None:
+    global PreferencesSettings
+
+    PreferencesSettings = sublime.load_settings("Preferences.sublime-settings")
+    PreferencesSettings.add_on_change("Timeless.IconSupport", handle_settings_change)
+
+    handle_settings_change()
+
+
+def plugin_unloaded() -> None:
+    if PreferencesSettings:
+        PreferencesSettings.clear_on_change("Timeless.IconSupport")
+
+    try:
+        from package_control import events
+        if events.remove("Theme - Timeless"):
+            remove_icon_support()
+    except:
+        pass
 
