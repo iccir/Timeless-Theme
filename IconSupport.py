@@ -105,21 +105,7 @@ CPlusPlusSublimeSettings = """{
     */
     "extensions": [ "__timeless_theme_icon_support__" ]
 }"""
-
-
-SentinelPy = """
-import sublime, os, shutil
-
-def plugin_loaded() -> None:
-    settings = sublime.load_settings("Preferences.sublime-settings")
-
-    if not settings.get("theme.timeless.icons.install_support_files", False):
-        try:
-            shutil.rmtree(os.path.join(sublime.cache_path(), "Timeless Icon Support"), ignore_errors=True)
-        except:
-            pass
-"""
-            
+        
 
 PreferencesSettings = None
 
@@ -191,9 +177,6 @@ def install_icon_support(c_letters: bool = False) -> None:
     
     with open(os.path.join(base_path, "about.txt"), "w") as f:
         f.write(AboutTxt)
-
-    with open(os.path.join(base_path, "sentinel.py"), "w") as f:
-        f.write(SentinelPy)
 
     files_to_write = { }
     

@@ -88,6 +88,7 @@ To revert back to the default state, set `theme.timeless.icons.install_support_f
 
 Timeless is also compatible with [AFileIcon](https://github.com/SublimeText/AFileIcon) for icon management.
 
+**Note**: If `Packages/Theme - Timeless` is manually removed while `theme.timeless.icons.install_support_files` is set to `true`, the `Caches/Timeless Icon Support` folder will never be cleaned up. You will need to manually remove it. If Timeless is removed via Package Control, it should automatically clean up the support folder.
 
 ## License and Acknowledgements
 
