@@ -44,7 +44,7 @@ To configure Sublime Text to use the theme, follow the instructions below:
 
 * `theme.timeless.icons.use_overlay` - If `true`, adds an additional shadow to file icons in dark mode. This improves contrast but may conflict with [AFileIcon](https://github.com/SublimeText/AFileIcon) icons. Defaults to `true`.
 
-* `theme.timeless.icons.install_additional` - If `true`, installs support for additional file icons. This may break icons in other themes. See [Activating additional icons](#activating-additional-icons) for more information. Defaults to `false`.
+* `theme.timeless.icons.install_support_files` - If `true`, installs support for additional file icons. This may break icons in other themes. See [Activating additional icons](#activating-additional-icons) for more information. Defaults to `false`.
 
 * `theme.timeless.icons.install_c_letters` - If `true`, installs support files needed to use the letter icons for C files. See [Activating additional icons](#activating-additional-icons) for more information. Defaults to `false`.
 
