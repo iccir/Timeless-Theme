@@ -151,23 +151,33 @@ def patch_cpp_extensions(enable: boolean):
                 os.remove(user_cpp_settings_path)
 
 
-def is_version_installed(version_path: str, c_letters: bool) -> bool:
-    version_installed = maybe_load_resource(version_path, "").strip()
-
+def get_version_string(c_letters: bool) -> str:
     if c_letters:
-        version_to_install = "{}+c_letters".format(Version)
+        return "{}+c_letters".format(Version)
     else:
-        version_to_install = "{}".format(Version)
-        
-    return version_installed == version_to_install
+        return "{}".format(Version)
+
+
+def is_version_installed(version_path: str, version_string: str) -> bool:
+    version_installed = None
+
+    try:
+        with open(version_path, "r") as f:
+            version_installed = f.read().strip()
+    except:
+        pass
+
+    return version_installed == version_string
     
 
 def install_icon_support(c_letters: bool = False) -> None:
     base_path = get_timeless_icon_support_path()
     files_path = os.path.join(base_path, "files")
-    version_path = os.path.join(base_path, "version.txt")
 
-    if is_version_installed(version_path, c_letters):
+    version_path = os.path.join(files_path, "version.txt")
+    version_string = get_version_string(c_letters)
+
+    if is_version_installed(version_path, version_string):
         return
 
     remove_icon_support()
@@ -177,6 +187,9 @@ def install_icon_support(c_letters: bool = False) -> None:
     
     with open(os.path.join(base_path, "about.txt"), "w") as f:
         f.write(AboutTxt)
+        
+    with open(version_path, "w") as f:
+        f.write(version_string)
 
     files_to_write = { }
     
@@ -211,14 +224,28 @@ def remove_icon_support() -> None:
     patch_cpp_extensions(False)
 
 
+cached_install_support_files = None
+cached_install_c_letters     = None
+
 def handle_settings_change():
+    global cached_install_support_files, cached_install_c_letters
+
     install_support_files = PreferencesSettings.get("theme.timeless.icons.install_support_files", False)
     install_c_letters     = PreferencesSettings.get("theme.timeless.icons.install_c_letters",     False)
+    
+    if (
+        install_support_files == cached_install_support_files and
+        install_c_letters     == cached_install_c_letters
+    ):
+        return
     
     if install_support_files:
         install_icon_support(c_letters = install_c_letters)
     else:
         remove_icon_support()
+        
+    cached_install_support_files = install_support_files
+    cached_install_c_letters     = install_c_letters
 
 
 def plugin_loaded() -> None:
