@@ -151,6 +151,17 @@ def patch_cpp_extensions(enable: boolean):
                 os.remove(user_cpp_settings_path)
 
 
+def unassign_support_syntax() -> None:
+    for w in sublime.windows():
+        for v in w.views(include_transient=True):
+            syntax = v.syntax()
+            if not syntax: continue
+            if not syntax.path: continue
+            
+            if "Timeless Icon Support" in syntax.path:
+                v.assign_syntax("scope:text.plain")
+
+
 def get_version_string(c_letters: bool) -> str:
     if c_letters:
         return "{}+c_letters".format(Version)
@@ -216,6 +227,8 @@ def install_icon_support(c_letters: bool = False) -> None:
 
 
 def remove_icon_support() -> None:
+    unassign_support_syntax()
+
     try:
         shutil.rmtree(get_timeless_icon_support_path(), ignore_errors=True)
     except:
