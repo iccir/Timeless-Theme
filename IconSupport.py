@@ -11,7 +11,7 @@ import shutil
 
 
 # Bump this after adding a new icons
-Version = 1
+Version = 2
 
 
 FileSuffixToScopeMap = {
@@ -41,12 +41,12 @@ FileSuffixToScopeMap = {
 }
 
 
-CLetterFileSuffixToScopeMap = {
-    "h":   "source.c++.header",
-    "c":   "source.c",
-    "c++": "source.c++",
-    "m":   "source.objc",
-    "mm":  "source.objc++"
+CLetterFileSuffixToInfoMap = {
+    "h":   ( "h",   "source.c++.header" ),
+    "c":   ( "c",   "source.c" ),
+    "c++": ( "cpp", "source.c++" ),
+    "m":   ( "m",   "source.objc" ),
+    "mm":  ( "mm",  "source.objc++" )
 }
 
 
@@ -213,8 +213,9 @@ def install_icon_support(c_letters: bool = False) -> None:
         files_to_write[f"icon_{key}.tmPreferences"] = contents
         
     if c_letters:
-        for key, value in CLetterFileSuffixToScopeMap.items():
-            contents = TmPreferencesTemplate % (value, f"timeless_letter_{key}")
+        for key, value in CLetterFileSuffixToInfoMap.items():
+            letter, scope = value
+            contents = TmPreferencesTemplate % (scope, f"timeless_letter_{letter}")
             files_to_write[f"icon_{key}.tmPreferences"] = contents
 
         write_file("C++ Header.sublime-syntax",   CPlusPlusHeaderSublimeSyntax)
