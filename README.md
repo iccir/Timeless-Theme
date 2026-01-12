@@ -33,7 +33,7 @@ To configure Sublime Text to use the theme, follow the instructions below:
 
 * Open your User Settings Preferences file via `Sublime Text -> Settings -> Settings`
 * For the light variant, add or update `theme` to be `"theme": "Timeless.sublime-theme"`.
-* For the light variant, add or update `theme` to be `"theme": "Timeless Dark.sublime-theme"`.
+* For the dark variant, add or update `theme` to be `"theme": "Timeless Dark.sublime-theme"`.
 
 
 ### Additional Theme Settings
