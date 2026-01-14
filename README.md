@@ -58,7 +58,7 @@ To configure Sublime Text to use the theme, follow the instructions below:
 
     "theme.timeless.symbols.use_uppercase_font": false,
     "theme.timeless.symbols.hide_hints": false,
-    "theme.timeless.icons.use_overlay": true,
+    "theme.timeless.icons.use_overlay": true
 }
 ```
 
@@ -93,6 +93,8 @@ Timeless is also compatible with [AFileIcon](https://github.com/SublimeText/AFil
 ## License and Acknowledgements
 
 To the extent possible, the files in this repository are [dedicated to the public domain](https://creativecommons.org/publicdomain/zero/1.0/).
+
+`SPDX-License-Identifier: CC0-1.0`
 
 That said:
 
