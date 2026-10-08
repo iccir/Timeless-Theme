@@ -134,13 +134,21 @@ def patch_cpp_extensions(enable: boolean):
                 f.write(CPlusPlusSublimeSettings)
         else:
             cpp_settings = sublime.load_settings(cpp_settings_name)
-            cpp_settings.set("extensions", [ magic_key ])
+            if cpp_settings.get("extensions") == [ "h" ]:
+                cpp_settings.set("extensions", [ magic_key ])
             sublime.save_settings(cpp_settings_name)
 
     else:
         cpp_settings = sublime.load_settings(cpp_settings_name)
-        if magic_key in cpp_settings.get("extensions", [ ]):
-            del cpp_settings["extensions"]
+        extensions = cpp_settings.get("extensions", [ ])
+        if magic_key in extensions:
+            extensions.remove(magic_key)
+
+            if len(extensions) > 0:
+                cpp_settings.set("extensions", extensions)
+            else:
+                del cpp_settings["extensions"]
+
             sublime.save_settings(cpp_settings_name)
             
             # Directly load the JSONC file and see if it is empty.
